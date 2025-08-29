@@ -3,7 +3,7 @@ import pickle
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "YOUR_API_KEY"
 
 class RAGPipeline:
     def __init__(self):
@@ -28,3 +28,4 @@ class RAGPipeline:
             messages=[{"role": "user", "content": prompt}],
         )
         return response.choices[0].message.content.strip()
+
